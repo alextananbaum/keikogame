@@ -31,7 +31,7 @@ tw-link:hover {
 
 img {
   max-width:100%;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Begin" tags="" position="675,300" size="100,100">(align:&quot;&lt;==&quot;)[You are [[KEIKO -&gt; name exp]]. You are a  [[KILLER WHALE -&gt; orca exp]] living in a tank in [[MEXICO CITY -&gt; MC]]. 
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Begin" tags="" position="675,300" size="100,100">(align:&quot;&lt;==&quot;)[You are [[KEIKO -&gt; name exp]]. You are a  [[KILLER WHALE -&gt; orca exp]] living in a tank in [[MEXICO CITY -&gt; MC]] at Reino Adventura. 
 
 {
 (live: 2s) [
@@ -59,7 +59,7 @@ You&#39;re not sure if you like it here.
 (text-style:&quot;blink&quot;)[[[Back -&gt;Begin]]]</tw-passagedata><tw-passagedata pid="3" name=" MC" tags="" position="550,425" size="100,100">Provenence: Captured in 1979 off the coast of Iceland. Transported to an aquarium in (link-repeat: &quot;Hafnarfjörður&quot;)[(open-url:&quot;https://killerwhales.fandom.com/wiki/S%C3%A6d%C3%BDrasafni%C3%B0_(Hafnarfj%C3%B6r%C3%B0ur_Aquarium&quot;)], Iceland, then to (link-repeat: &quot;Marineland&quot;) [(open-url: &quot;https://www.npr.org/2023/03/11/1162863883/kiska-the-loneliest-whale-in-the-world-dies-at-canada-amusement-park&quot;)], Canada, and finally to (link-repeat: &quot;Reino Aventura&quot;) [(open-url:&quot;https://en.wikipedia.org/wiki/Reino_Aventura&quot;)] in Mexico City.
 
 (text-style:&quot;blink&quot;)[[[Back -&gt;Begin]] ]
-</tw-passagedata><tw-passagedata pid="4" name="actor arc" tags="" position="675,550" size="100,100">(if: $likeMC &gt; 0)[Your tank is a bit dirty, but you love my  human handlers. Also, you have a dolphin friend! You two talk sometimes. You&#39;ve also learned to mimic the sounds of ambulences you hear from the beyond the walls of our tanks, the aquariums, out into the city.]
+</tw-passagedata><tw-passagedata pid="4" name="actor arc" tags="" position="675,550" size="100,100">(if: $likeMC &gt; 0)[Your tank is a bit dirty, but you love your  human handlers. Also, you have a dolphin friend! You two talk sometimes. You&#39;ve also learned to mimic the sounds of ambulences you hear from beyond the walls of our tanks, the aquariums, out into the city.]
 
 (if: $hateMC &gt; 0) [Your tank is dirty and your skin is itchy. The vet says you have papillomavirus. Your handlers seem to care about you, but you are lonely.]
 
@@ -139,7 +139,8 @@ You&#39;re back in Reino Adventura now. The days go on.
 (set: $pap to 0)
 (set: $salmon to 0)
 (set: $seagull to 0)
-(set: $tv to 0)</tw-passagedata><tw-passagedata pid="9" name="Discover your situation" tags="" position="675,800" size="100,100">People in the United States appear to have found out that you are the whale that played Willy. They&#39;re angry, because you live in a small tank. 
+(set: $tv to 0)
+(set: $shud to (text-style: &quot;shudder&quot;))</tw-passagedata><tw-passagedata pid="9" name="Discover your situation" tags="" position="675,800" size="100,100">People in the United States appear to have found out that you are the whale that played Willy. They&#39;re angry, because you live in a small tank. 
 
 {
 (live: 3s) [
@@ -199,7 +200,7 @@ It&#39;s just too loud.
 Your handlers try giving you fish, but you can&#39;t be bribed. 
 ]
 (live: 6s) [
-Finally, several more people climb into my pool, spreading out a large net. You are hearded into the sling.
+Finally, several more people climb into your pool, spreading out a large net. You are herded into the sling.
 ]
 
 (text-style:&quot;blink&quot;)[[[Next -&gt;journey to oregon]]]</tw-passagedata><tw-passagedata pid="12" name="are you sure (sling)" tags="" position="800,1050" size="100,100">Your handlers stay close, trying to calm you. 
@@ -274,13 +275,14 @@ They tell you to dive down as far as you can...
 
 {
 (live: 6s) [
-After long days of learning new (click-replace: &quot;tricks&quot;) [tricks (skills),] they leave you alone at night.
+After long days of learning new (link-replace: &quot;tricks&quot;) [skills,]
+ they leave you alone at night.
 ]
 }
 
 {
 (live: 7s) [
-[[It&#39;s nighttime now -&gt;scare security guards]] 
+[[It&#39;s night time now -&gt;scare security guards]] 
 ]
 }
 </tw-passagedata><tw-passagedata pid="16" name="tv" tags="" position="800,1550" size="100,100">At night, when all of your new handlers are gone, you watch TV. It&#39;s a lot of black-and-white re-runs. 
@@ -307,7 +309,7 @@ Occassionally action movies.
 (live: 6s) [
 [[It&#39;s still nightime?? -&gt;scare security guards]]
 ]
-}</tw-passagedata><tw-passagedata pid="17" name="scare security guards" tags="" position="800,1675" size="100,100">It&#39;s nighttime, and you&#39;re bored (if: $tv &gt; 0) [of watching TV]. 
+}</tw-passagedata><tw-passagedata pid="17" name="scare security guards" tags="" position="800,1675" size="100,100">It&#39;s nighttime, and you&#39;re bored (if: $tv &gt; 0) [of watching TV].
 
 {
 (live: 3s) [
@@ -477,12 +479,12 @@ Those people say they want to &quot;free you.&quot;
 }</tw-passagedata><tw-passagedata pid="25" name="sea pen" tags="" position="700,2050" size="100,100">You are placed into a sea pen. It&#39;s around the size of a football field. 
 {
 (live: 2s) [
-It&#39;s so different from anywhere you&#39;ve ever lived before. There are so many  (click-replace: &quot;sounds&quot;)[sounds (fishswimminggullscallingyourmothercallinginthedistance).] 
+It&#39;s so different from anywhere you&#39;ve ever lived before. There are so many  (link-replace: &quot;sounds&quot;)[sounds (text-style:&quot;sway&quot;)[(fishswimminggullscallingyourmothercallinginthedistance)].] 
 ]
 (live: 5s) [
-There are so many (click-replace: &quot;sensations&quot;) [sensations (currentschangingcoldwatersalt
+There are so many  (link-replace: &quot;sensations&quot;) [sensations (text-style:&quot;sway&quot;)[(currentschangingcoldwatersalt
 thesoundofhighwinds
-yourmothercallinginthedistance).] 
+yourmothercallinginthedistance)].]
 ]
 }
 
@@ -681,28 +683,30 @@ You slowly follow the boat home.
 Your people don&#39;t say hi to you anymore. 
 ]
 }
+
 {
 (live: 6s) [ 
-(stop: )
-Youwonderwhyyouwonderwhyyouwonderwhyyouwonder...
+
+(link-replace: &quot;IwonderwhyIwonderwhyIwonder&quot;)[Until one day you don&#39;t]
+
 ]
 }
 
 {
+
 (live: 9s) [
-(stop: )
-And then you don&#39;t. 
-]
-(live: 11s) [
-(stop: )
+
 You focus on the seagulls that sometimes catch your fish instead. 
 ]
-(live: 13s)[
-(stop: )
+(live: 12s)[
+
 And the guideboat you follow for food and adventures outside your pen. 
 ]
+}
+
+{
 (live: 15s)[
-(and yourmothercallinginthedistance)
+(text-style:&quot;buoy&quot;)[(and yourmothercallinginthedistance)]
 ]
 }
 
@@ -739,7 +743,7 @@ You do want to make your humans proud. You end up going out.
 
 {
 (live: 2s) [
-You catch a tiny fish, bringing it back to a people proudly. 
+You catch a tiny fish, bringing it back to your people proudly. 
 ]
 (live: 4s) [
 It struggles against your lips, but you&#39;re excited to show it off. 

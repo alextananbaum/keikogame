@@ -31,7 +31,13 @@ tw-link:hover {
 
 img {
   max-width:100%;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Begin" tags="" position="675,300" size="100,100">(align:&quot;&lt;==&quot;)[You are [[KEIKO -&gt; name exp]]. You are a  [[KILLER WHALE -&gt; orca exp]] living in a tank in [[MEXICO CITY -&gt; MC]] at Reino Adventura. 
+}
+
+.passage button {
+  margin: auto;
+  width: 50%
+    text-align: center;
+  text-decoration: blink;</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Begin" tags="" position="675,300" size="100,100">(align:&quot;&lt;==&quot;)[You are [[KEIKO -&gt; name exp]]. You are a  [[KILLER WHALE -&gt; orca exp]] living in a tank in [[MEXICO CITY -&gt; MC]] at Reino Adventura. 
 
 {
 (live: 2s) [
@@ -43,15 +49,13 @@ You&#39;re not sure if you like it here.
 
 {
 (live: 4s) [
-(stop: )
-(link: &quot;Yes I do&quot;)[(set: $likeMC to 1)(goto: &quot;actor arc&quot;)]
+[(link: &quot;Yes I do&quot;)[(set: $likeMC to 1)(goto: &quot;actor arc&quot;)]]
 ]
 }
 
 {
 (live: 4s) [
-(stop: )
-(link: &quot;No I don&#39;t&quot;)[(set: $hateMC to 1)(goto: &quot;actor arc&quot;)]
+[(link: &quot;No I don&#39;t&quot;)[(set: $hateMC to 1)(goto: &quot;actor arc&quot;)]]
 
 ]
 }]</tw-passagedata><tw-passagedata pid="2" name=" orca exp" tags="" position="900,300" size="100,100">Also known as orcas. Not a whale but a dolphin. Can reach up to 9.8 meters in length. You are only 3 meters long.
@@ -183,15 +187,16 @@ Should you do it?
 {
 (live: 6s) [
 (stop: )
-[[Yes I should-&gt;sling fakeout]]
+[[I probably should-&gt;sling fakeout]]
 ]
 }
 {
 (live: 6s) [
 (stop: )
-[[No I shouldn&#39;t-&gt;are you sure (sling)]]
+[[I definitely shouldn&#39;t-&gt;are you sure (sling)]]
 ]
-}</tw-passagedata><tw-passagedata pid="11" name="sling fakeout" tags="" position="675,1050" size="100,100">You are not swimming into that sling.
+}</tw-passagedata><tw-passagedata pid="11" name="sling fakeout" tags="" position="675,1050" size="100,100">You are not swimming into that sling (even if you probably should)
+
 {
 (live: 2s) [
 It&#39;s just too loud. 
@@ -202,8 +207,14 @@ Your handlers try giving you fish, but you can&#39;t be bribed.
 (live: 6s) [
 Finally, several more people climb into your pool, spreading out a large net. You are herded into the sling.
 ]
+}
 
-(text-style:&quot;blink&quot;)[[[Next -&gt;journey to oregon]]]</tw-passagedata><tw-passagedata pid="12" name="are you sure (sling)" tags="" position="800,1050" size="100,100">Your handlers stay close, trying to calm you. 
+{
+(live: 8s) [
+(stop:)
+(text-style:&quot;blink&quot;)[[[Next -&gt;journey to oregon]]]
+]
+}</tw-passagedata><tw-passagedata pid="12" name="are you sure (sling)" tags="" position="800,1050" size="100,100">Your handlers stay close, trying to calm you. 
 
 {
 (live: 3s) [
@@ -391,7 +402,7 @@ The arc of this game closely follows that of the New York Times podcast //The Go
 
 Thank you to my dad for being my test player and sounding board in creating this project. 
 
-Thank you to my mom for helping me in my first computer science class (which I hated, thank god for Twine) and being my non-man-in-STEM rolemodel. 
+Thank you to my mom for helping me in my first computer science class, and being my non-man-in-STEM rolemodel. 
 
 Thank you for playing!
 [[Start again? -&gt;Begin]] </tw-passagedata><tw-passagedata pid="22" name="learn to fish" tags="" position="675,1300" size="100,100">They fly you to a new aquarium off the coast of Oregon. 
@@ -451,7 +462,7 @@ Let&#39;s learn to fish!
 
 {
 (live: 7s) [
-[[I&#39;ve learned to fish now -&gt;food progress]] 
+(text-style:&quot;blink&quot;)[[[I&#39;ve learned to fish now -&gt;food progress]] ]
 ]
 }
 </tw-passagedata><tw-passagedata pid="24" name="Health" tags="" position="925,1750" size="100,100">They are teaching you to swim into a sling again; you know you are going to be moved again soon. 
@@ -470,7 +481,7 @@ The people who don&#39;t work for the aquarium say they&#39;re being sabatoged.
 
 {
 (live: 6s) [
-Those people say they want to &quot;free you.&quot;
+Those people say they want to &quot;free you.&quot; Free you from what?
 ]
 }
 
@@ -680,8 +691,8 @@ You slowly follow the boat home.
 (text-style:&quot;blink&quot;)[[[Next -&gt;breaking bonds]]]
 ]
 }</tw-passagedata><tw-passagedata pid="33" name="title screen" tags="" position="675,175" size="100,100">(align:&quot;&lt;==&quot;)[(align:&quot;=&gt;&lt;=&quot;)[You are Keiko]
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[(text-style:&quot;blink&quot;)[[[Start -&gt;Begin]] ]]]
-</tw-passagedata><tw-passagedata pid="34" name="ignore" tags="" position="825,2175" size="100,100">{
+
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[(text-style:&quot;blink&quot;) [[[Start -&gt;Begin]] ]]]</tw-passagedata><tw-passagedata pid="34" name="ignore" tags="" position="825,2175" size="100,100">{
 (live: 3s) [
 (stop: )
 Your people don&#39;t say hi to you anymore. 
@@ -995,7 +1006,7 @@ and alone.
 
 {
 (live: 12s) [
-[[Go home -&gt;Norway]]
+(text-style:&quot;blink&quot;)[[[Go home -&gt;Norway]]]
 ]
 }</tw-passagedata><tw-passagedata pid="48" name="miss humans" tags="" position="575,3325" size="100,100">Something is definitely missing. There&#39;s still a hollowness somewhere. A lack that you can&#39;t fully echolocate. 
 
@@ -1131,15 +1142,41 @@ Do you want to:
 ]
 }</tw-passagedata><tw-passagedata pid="52" name="get in trouble" tags="" position="425,3500" size="100,100">Time to eat some salmon!! The farmer //hates// when you do this. Your humans think it&#39;s funny.
 
-[&lt;iframe src= &quot;salmonfinal.html&quot; width=&quot;400&quot; height=&quot;400&quot; style= &quot;border:none&quot;&gt;&lt;/iframe&gt;] 
+{
+(live: 2s) [
+(stop:)
 
-[[Next -&gt;head scritch]]</tw-passagedata><tw-passagedata pid="53" name="seagull" tags="" position="300,3550" size="100,100">This&#39;ll be the last time a seagull tries to eat your fish!!
+(Click the dark blue square, then press the space bar to get started)
 
-[&lt;iframe src= &quot;seagullfinal.html&quot; width=&quot;400&quot; height=&quot;400&quot; style= &quot;border:none&quot;&gt;&lt;/iframe&gt;] 
+[&lt;iframe src= &quot;salmonfinal.html&quot; width=&quot;400&quot; height=&quot;400&quot; style= &quot;border:none&quot;&gt;&lt;/iframe&gt;]
 
-spit out seagull 
+]
+}
 
-[[Next -&gt;head scritch]]</tw-passagedata><tw-passagedata pid="54" name="sick" tags="" position="300,3675" size="100,100">You&#39;re sick. You know you&#39;re infection prone. Maybe it&#39;s from all of those years in small, dirty tanks. 
+{
+(live: 4s) [
+(text-style:&quot;blink&quot;)[[[Back to Bay -&gt;head scritch]]]
+]
+}</tw-passagedata><tw-passagedata pid="53" name="seagull" tags="" position="300,3550" size="100,100">This&#39;ll be the last time a seagull tries to eat your fish!!
+
+{
+(live: 2s) [
+(stop:)
+
+(Click the dark blue square, then press the space bar to get started)
+
+[&lt;iframe src= &quot;seagullfinal.html&quot; width=&quot;400&quot; height=&quot;400&quot; style= &quot;border:none&quot;&gt;&lt;/iframe&gt;]
+
+]
+}
+
+{
+(live: 4s) [
+(text-style:&quot;blink&quot;)[[[Spit out seagull  -&gt;head scritch]]]
+]
+}
+
+</tw-passagedata><tw-passagedata pid="54" name="sick" tags="" position="300,3675" size="100,100">You&#39;re sick. You know you&#39;re infection prone. Maybe it&#39;s from all of those years in small, dirty tanks. 
 
 {
 (live: 3s) [
@@ -1207,7 +1244,7 @@ A mournful call, nobody that can understand it can hear.
 
 {
 (live: 13s) [
-[[So you swim into a nearby bay -&gt;Norway]] 
+(text-style:&quot;blink&quot;)[[[So you swim into a nearby bay -&gt;Norway]] ]
 ]
 }</tw-passagedata><tw-passagedata pid="57" name="discovered again" tags="" position="300,3175" size="100,100">But the next day, it&#39;s too loud. 
 {
